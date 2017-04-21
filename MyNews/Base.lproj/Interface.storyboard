@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8Af-Ev-1xj">
+    <device id="watch42" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="D0g-6b-OAU">
+            <objects>
+                <controller id="8Af-Ev-1xj" customClass="InterfaceController" customModule="MyNews_Extension">
+                    <items>
+                        <table alignment="left" id="yCc-Vd-KuJ">
+                            <items>
+                                <tableRow identifier="NewsRowController" id="Nw8-Ul-SkL" customClass="NewsRowController" customModule="MyNews_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="MoM-8N-PEi">
+                                        <items>
+                                            <label width="1" alignment="left" text="Label" numberOfLines="0" id="QZH-n3-H8p"/>
+                                            <label width="1" alignment="left" text="Label" minimumScaleFactor="0.5" id="Prx-UR-hoF">
+                                                <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                            </label>
+                                        </items>
+                                        <connections>
+                                            <segue destination="VFO-Y6-7mn" kind="push" id="Jdx-53-zQq"/>
+                                        </connections>
+                                    </group>
+                                    <connections>
+                                        <outlet property="pubDateLabel" destination="Prx-UR-hoF" id="uu0-iy-SWQ"/>
+                                        <outlet property="titleLabel" destination="QZH-n3-H8p" id="p59-9M-UcM"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="newsTable" destination="yCc-Vd-KuJ" id="3Hw-Fk-aAb"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="228" y="369"/>
+        </scene>
+        <!--Detail Interface Controller-->
+        <scene sceneID="RY9-Pd-ptV">
+            <objects>
+                <controller id="VFO-Y6-7mn" customClass="DetailInterfaceController" customModule="MyNews_Extension">
+                    <items>
+                        <label width="1" alignment="left" text="Label" numberOfLines="0" id="Pqv-9D-aHc"/>
+                    </items>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="Pqv-9D-aHc" id="QqP-6K-Mb1"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="466.41025641025647" y="367.46153846153851"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="z2c-SE-jBo">
+            <objects>
+                <controller id="5lw-cz-hxA">
+                    <items>
+                        <button width="1" alignment="left" title="Button1" id="2Th-O3-Hle"/>
+                    </items>
+                    <connections>
+                        <segue destination="dP8-nM-sYQ" kind="relationship" relationship="nextPage" id="xPU-Ar-aac"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="804" y="402"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="Q87-Cd-835">
+            <objects>
+                <controller id="dP8-nM-sYQ">
+                    <items>
+                        <button width="1" alignment="left" title="Button2" id="tTq-rQ-uYZ"/>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="1085" y="401"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="9pK-CP-Cod">
+            <objects>
+                <controller id="eR8-Ia-O12">
+                    <items>
+                        <button width="1" alignment="left" title="Button" id="BQm-v5-taO"/>
+                        <group width="1" alignment="left" id="6Ao-DV-CUD">
+                            <items>
+                                <button width="48" alignment="left" title="Button" id="nZf-xO-5d1"/>
+                                <switch width="1" alignment="left" value="YES" title="Switch" id="qhI-i8-19Y"/>
+                            </items>
+                        </group>
+                        <paymentButton width="1" alignment="left" id="Piu-dL-hTt"/>
+                    </items>
+                    <connections>
+                        <segue destination="5lw-cz-hxA" kind="relationship" relationship="nextPage" id="uF3-lY-niD"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="803.79487179487182" y="54.487179487179489"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="220" y="643"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="MyNews" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="643"/>
+        </scene>
+    </scenes>
+</document>
