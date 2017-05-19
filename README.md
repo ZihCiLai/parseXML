@@ -11,12 +11,6 @@
 ####  Reachability是偵測網路連線狀態的程式：[Apple官方下載][]、[GitHub下載][]
   [Apple官方下載]:  http://developer.apple.com/library/ios/#samplecode/Reachability/Introduction/Intro.html
   [GitHub下載]:    https://github.com/tonymillion/Reachability
-I get 10 times more traffic from [Google][] than from
-[Yahoo][] or [MSN][].
-
-  [google]: http://google.com/        "Google"
-  [yahoo]:  http://search.yahoo.com/  "Yahoo Search"
-  [msn]:    http://search.msn.com/    "MSN Search"
   
 ####  XML維基百科: 
 可延伸標記式語言（英語：Extensible Markup Language，簡稱：XML），是一種標記式語言。標記指電腦所能理解的資訊符號，通過此種標記，電腦之間可以處理包含各種資訊的文章等。如何定義這些標記，既可以選擇國際通用的標記式語言，比如HTML，也可以使用像XML這樣由相關人士自由決定的標記式語言，這就是語言的可延伸性。XML是從標準通用標記式語言（SGML）中簡化修改出來的。它主要用到的有可延伸標記式語言、可延伸樣式語言（XSL）、XBRL和XPath等。  
